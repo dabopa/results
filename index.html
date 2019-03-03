@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Index</title>
+</head>
+<body>
+  <a href="" id="dalink" style="font-weight: bold;margin-left: 40px;color:blue;">⚠ go to yesterday</a>
+<script type="text/javascript">
+  var json_yesterday = (function(d){ d.setDate(d.getDate()-1); return d})(new Date).toISOString().split('T')[0] + ".json"
+  var link_yesterday = "https://dabopa.github.io/results/" + json_yesterday
+  document.getElementById('dalink').setAttribute('href', link_yesterday);
+</script>
+</body>
+</html>
